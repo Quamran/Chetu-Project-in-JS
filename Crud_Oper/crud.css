@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+
+    background-color: aqua;
+}
+
+#tab{
+    margin-left: 5px;
+}
+
+table tr td{
+    padding: 10px;
+    
+}
+
+th{ 
+    padding: 10px;
+}
+
+

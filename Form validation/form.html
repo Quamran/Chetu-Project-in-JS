@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <link rel="stylesheet" href="form.css">
+
+</head>
+
+<body>
+    <div id="123">
+        <form  onsubmit=" return validation()" autocomplete="off">
+
+            <h1> FORM VALIDATION </h1>
+            <div id="124" style="text-align: center; ">
+                <div>
+                    <label>Name:</label><br>
+                    <input type="text" name="name" id="name" placeholder="Enter name" ><br>
+                    <span id="a"></span>
+                </div>
+
+                <div>
+                    <label>MOBILE_NO:</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Enter Phone no" ><br>
+                    <span id="b"></span>
+                </div>
+
+                <div>
+                    <label>PASSWORD:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter password"
+                        ><br>
+                    <span id="c"></span>
+                </div>
+
+
+                <div>
+                    <label>CON_PASSWORD</label><br>
+                    <input type="password" id="cnfp" name="cnfp" placeholder="Confirm password" ><br>
+                    <span id="d"></span>
+                </div>
+
+                <div>
+                    <label>Email:</label><br>
+                    <input type="email" name="mail" id="mail" placeholder="Enter mail" ><br>
+                    <span id="e"></span><br>
+                </div>
+
+                <input type="submit" name="sbtn" id="btn" value="submit">
+
+            </div>
+
+        </form>
+    </div>
+
+    <script src="form.js"></script>
+
+</body>
+
+</html>

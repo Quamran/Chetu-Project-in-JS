@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:black;
+
+}
+
+
+
+
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    
+    
+}
+
+#clock{
+
+    color:aqua;
+    font-size: 80px;
+    
+    
+}
+#date{
+    color: aliceblue;
+    font-size: 15px;
+    
+}

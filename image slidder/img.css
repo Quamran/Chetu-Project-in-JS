@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:black;
+}
+
+#container{
+
+    width: 100%;
+    height: 300px;
+  
+   
+}
+
+h1{
+
+    background-color:darkblue;
+    color: aqua;
+    text-align: center;
+
+}
+
+#imgslider{
+
+    width: 100%;
+    height: 300px;
+    margin-top: 5px;
+    
+}

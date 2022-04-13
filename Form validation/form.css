@@ -1,0 +1,27 @@
+body{
+    
+    background-color: aqua;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+span{
+    color: red;
+}
+h1{
+    background-color: yellow;
+}
+#123{
+    border: 1pxm solid black;
+}
+#btn{
+    background-color: cornflowerblue;
+    border-radius: 2px;
+    outline: none;
+}
+
+
+
+
