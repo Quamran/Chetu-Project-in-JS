@@ -1,15 +1,14 @@
-var selectRow = null;
+var selectedRow = null
 
-
-function FormSubmit() {
-
-    var formData = readFormData();
-    if (selectRow == null)
-        insertNewRecord(formData);
-    else
-        updateRecord(formData);
-    resetForm();
-
+function onFormSubmit() {
+    if (formvalidate()) {
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
 }
 
 function readFormData() {
@@ -33,8 +32,8 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.city;
     cell5 = newRow.insertCell(4);
-    cell5.innerHTML = `<a onClick="onEdit(this) ">Edit</a> <a onClick="onDelete(this)">Delete</a>`;
-                       
+    cell5.innerHTML = `<button onClick="onEdit(this)" class="btn btn-success btn-sm">Edit</button>
+                       <button onClick="onDelete(this)" class="btn btn-danger btn-sm">Delete</button>`;
 }
 
 function resetForm() {
@@ -54,8 +53,8 @@ function onEdit(td) {
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.fullName;
-    selectedRow.cells[1].innerHTML = formData.empCode;
-    selectedRow.cells[2].innerHTML = formData.salary;
+    selectedRow.cells[1].innerHTML = formData.roll;
+    selectedRow.cells[2].innerHTML = formData.marks;
     selectedRow.cells[3].innerHTML = formData.city;
 }
 
@@ -65,4 +64,16 @@ function onDelete(td) {
         document.getElementById("studentList").deleteRow(row.rowIndex);
         resetForm();
     }
+}
+function formvalidate() {
+    isValid = true;
+    if (document.getElementById("fullName").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+            document.getElementById("fullNameValidationError").classList.add("hide");
+    }
+    return isValid;
 }
